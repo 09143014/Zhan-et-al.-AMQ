@@ -29,10 +29,12 @@ This repository contains the simulation and reproduction code for the paper **"A
 The approximators for AMQ are as follows: for i = 1, 2, ..., m,
 
 $$
-\phi_{i,1}(x, a, b) = 1\\
-\phi_{i,2}(x, a, b) = x_i + \delta_i(x,a,b)\\
-\phi_{i,3}(x, a, b) = a\\
-\phi_{i,4}(x, a, b) = b\\
+\begin{aligned}
+\phi_{i,1}(x,a,b) &= 1 \\
+\phi_{i,2}(x,a,b) &= x_i + \delta_i(x,a,b) \\
+\phi_{i,3}(x,a,b) &= a \\
+\phi_{i,4}(x,a,b) &= b
+\end{aligned}
 $$
 
 
@@ -114,11 +116,13 @@ Final w vector:
 The approximators for AMQ are as follows: for i = 1, 2, ..., m,
 
 $$
-\phi_{i,1}(x, a, b) = 1\\
-\phi_{i,2}(x, a, b) = x_i + \delta_i(x,a,b)\\
-\phi_{i,3}(x, a, b) = x_i + \delta_i^2(x,a,b)\\
-\phi_{i,4}(x, a, b) = a\\
-\phi_{i,5}(x, a, b) = b\\
+\begin{aligned}
+\phi_{i,1}(x, a, b) &= 1\\
+\phi_{i,2}(x, a, b) &= x_i + \delta_i(x,a,b)\\
+\phi_{i,3}(x, a, b) &= x_i + \delta_i^2(x,a,b)\\
+\phi_{i,4}(x, a, b) &= a\\
+\phi_{i,5}(x, a, b) &= b\\
+\end{aligned}
 $$
 ```
 
