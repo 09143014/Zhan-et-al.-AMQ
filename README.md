@@ -2,6 +2,23 @@
 
 This repository contains the simulation and reproduction code for the paper **"Approximate Minimax Q Learning for Adversarial Markov Games with Unbounded State Spaces"**. It implements **Approximate Minimax-Q (AMQ)** with linear function approximation and provides experiment scripts for adversarial data-flow control tasks (e.g., routing and polling), including evaluation utilities and baseline comparisons to reproduce the main results and figures.
 
+## Code files and outputs
+
+- `RL_attacker_polling_AMQ1.ipynb`: AMQ1 polling-queue attacker/defender simulation. Learns/loads linear AMQ1 weights `w_k`, simulates the queue system, records `rl_history`, and prints per-queue statistics plus the final weight vector.
+- `RL_attacker_polling_AMQ2.ipynb`: AMQ2 version of the polling-queue attacker/defender simulation (quadratic feature set). Produces the same printed queue statistics and final weight vector.
+- `RL_attacker_polling_nn.ipynb`: Neural-network Q approximation baseline for the polling system. Defines `PollingSystemWithNN`, trains the network, and reports reward/learning diagnostics.
+- `random_experiments.ipynb`: Runs multiple random seeds for AMQ1/AMQ2/NNQ; writes learning curves to `outputs/AMQ1_*.out`, `outputs/AMQ2_*.out`, `outputs/NNQ_*.out`, and saves convergence plots to `figures/convergence_*.png`.
+- `error_bar_plot.ipynb`: Loads `.out` curves from `outputs/` to generate error-bar comparison plots; saves images like `error_bar_10000.png` and `error_bar_1000_amq.png`, plus colored variants under `colored_error_bar/`.
+- `updated_comparison_table.ipynb`: Aggregates runs and computes the comparison table and parameter-convergence summaries; displays tables/plots in the notebook (no file output by default).
+
+## Suggested workflow
+
+1. Run `RL_attacker_polling_AMQ1.ipynb` and `RL_attacker_polling_AMQ2.ipynb` to reproduce single-run AMQ logs and queue statistics.
+2. Run `RL_attacker_polling_nn.ipynb` to generate the NNQ baseline behavior for the same polling setup.
+3. Run `random_experiments.ipynb` to produce batched learning curves in `outputs/` and convergence figures in `figures/`.
+4. Run `updated_comparison_table.ipynb` to compute the comparison table and convergence summaries.
+5. Run `error_bar_plot.ipynb` to generate error-bar comparison plots (including colored versions in `colored_error_bar/`).
+
 
 ## Simulation notes (from logs)
 
